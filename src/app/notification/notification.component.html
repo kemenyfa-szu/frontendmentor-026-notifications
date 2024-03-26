@@ -1,0 +1,30 @@
+<article class="notification" [class.unread]="notification.unread">
+  <img
+    class="avatar"
+    src="assets/images/{{ notification.profilePic }}.webp"
+    alt="User avatar"
+  />
+  <div class="text-content">
+    <p class="action">
+      <a href="#" class="name">
+        {{ notification.name }}
+      </a>
+      {{ notification.action }}
+      <a href="#" class="with" [class]="notification.class">
+        {{ notification.with }}
+      </a>
+    </p>
+    <p class="when">{{ notification.when }}</p>
+    <p class="preview" *ngIf="notification.preview != ''">
+      <a href="#">
+        {{ notification.preview }}
+      </a>
+    </p>
+  </div>
+  <img
+    *ngIf="notification.photo != ''"
+    src="../assets/images/{{ notification.photo }}.webp"
+    alt="Playing Chess"
+    class="photo"
+  />
+</article>

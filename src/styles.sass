@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+// ## Colors
+// ### Primary
+$red: hsl(1, 90%, 64%)
+$blue: hsl(219, 85%, 26%)
+
+// ### neutral
+$white: hsl(0, 0%, 100%)
+$very-light-grayish-blue: hsl(210, 60%, 98%)
+$light-grayish-blue-1: hsl(211, 68%, 94%)
+$light-grayish-blue-2: hsl(205, 33%, 90%)
+$grayish-blue: hsl(219, 14%, 63%)
+$dark-grayish-blue: hsl(219, 12%, 42%)
+$very-dark-blue: hsl(224, 21%, 14%)
+
+$font-family: 'Plus Jakarta', Arial, Helvetica, sans-serif
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+@font-face
+  font-family: 'Plus Jakarta'
+  src: url('../src/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+
+html
+  font-size: 16px
+  font-weight: 500
+  font-family: $font-family
+
+body
+  background-color: $very-light-grayish-blue
+  color: $very-dark-blue
+
+main
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom: 1rem
+
+p
+  margin-bottom: 0.5rem
+
+img
+  display: block
+  max-width: 100%
+
+a
+  color: $dark-grayish-blue
+  font-weight: 800
+  text-decoration: none
+
+  &:hover
+    color: $blue
+
+.attribution
+  font-size: 11px
+  text-align: center
+
+.attribution a
+  color: hsl(228, 45%, 44%)
+
+@media screen and (min-width: 640px)
+  main
+    min-height: 100vh
+    padding: 7.5vh 5vw

@@ -1,0 +1,13 @@
+<section class="notification-tab">
+  <div class="summary">
+    <div class="title">
+      <h2>Notifications</h2>
+      <p class="new-count">{{ notificationCount }}</p>
+    </div>
+    <button>Mark all as read</button>
+  </div>
+  <app-notification
+    *ngFor="let notification of notifications"
+    [notification]="notification"
+  ></app-notification>
+</section>
