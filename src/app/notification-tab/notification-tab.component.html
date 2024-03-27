@@ -4,7 +4,7 @@
       <h2>Notifications</h2>
       <p class="new-count">{{ notificationCount }}</p>
     </div>
-    <button>Mark all as read</button>
+    <button (click)="markAllAsRead()">Mark all as read</button>
   </div>
   <app-notification
     *ngFor="let notification of notifications"

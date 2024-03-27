@@ -54,7 +54,8 @@
   a.name
     color: basic.$very-dark-blue
 
-    &:hover
+    &:hover,
+    &:focus
       color: basic.$blue
 
   a.group
@@ -74,11 +75,15 @@
     &:empty
       display: none
 
-    &:hover
+    &:hover,
+    &:focus
       background-color: basic.$light-grayish-blue-2
       cursor: pointer
 
-    a, a:hover
+    a,
+    a:hover,
+    &:focus
+      color: unset
       font-weight: unset
 
   .photo

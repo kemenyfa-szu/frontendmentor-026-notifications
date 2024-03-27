@@ -10,6 +10,14 @@ import { Notifications } from '../notifications';
 export class NotificationTabComponent {
   public notifications: Notification[] = Notifications;
 
-  public notificationCount = this.notifications.filter((noti) => noti.unread)
-    .length;
+  get notificationCount() {
+    return this.notifications.filter((noti) => noti.unread).length;
+  }
+
+  markAllAsRead(): void {
+    for (let notification of this.notifications) {
+      notification.unread = false;
+    }
+    return;
+  }
 }

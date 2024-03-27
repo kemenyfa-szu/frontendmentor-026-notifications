@@ -35,13 +35,17 @@
       font-weight: 500
       border: none
 
+      &:hover,
+      &:focus
+        color: basic.$blue
+        cursor: pointer
+
 @media screen and (min-width: 640px)
   .notification-tab
     border-radius: 20px
     box-shadow: 0px 0px 100px hsl(0, 0%, 0%, 0.1)
 
     .summary
-
       .title h2
         font-size: 1.5rem
       button
