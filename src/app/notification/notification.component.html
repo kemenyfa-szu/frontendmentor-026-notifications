@@ -10,7 +10,12 @@
         {{ notification.name }}
       </a>
       {{ notification.action }}
-      <a href="#" class="with" [class]="notification.class">
+      <a
+        href="#"
+        class="with"
+        [class]="notification.class"
+        *ngIf="notification.with != ''"
+      >
         {{ notification.with }}
       </a>
     </p>
